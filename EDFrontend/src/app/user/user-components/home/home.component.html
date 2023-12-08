@@ -1,0 +1,25 @@
+
+<mat-tab-group class="tab-menu">
+  <mat-tab label="Tüm Ürünler">
+    <div>
+      <ul class="list-group"  *ngFor="let product of products">
+    
+        <li class="list-group-item" >
+          {{ product.productName }}
+          
+        </li>
+      </ul> 
+     </div>
+  </mat-tab>
+  <mat-tab  *ngFor="let category of categories" label="{{category.categoryName}}">
+     <div>
+      <ul class="list-group"  *ngFor="let product of products">
+        <li class="list-group-item" *ngIf="category.id==product.categoryId">
+          {{ product.productName }}
+        </li>
+      </ul> 
+     </div>
+     
+</mat-tab>
+ 
+</mat-tab-group>
