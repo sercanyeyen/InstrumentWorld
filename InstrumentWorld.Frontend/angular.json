@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "EDFrontend": {
+    "InstrumentWorld.Frontend": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/edfrontend",
+            "outputPath": "dist/InstrumentWorldFE",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -79,10 +79,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "EDFrontend:build:production"
+              "browserTarget": "InstrumentWorld.Frontend:build:production"
             },
             "development": {
-              "browserTarget": "EDFrontend:build:development"
+              "browserTarget": "InstrumentWorld.Frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -90,7 +90,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "EDFrontend:build"
+            "browserTarget": "InstrumentWorld.Frontend:build"
           }
         },
         "test": {
@@ -116,5 +116,5 @@
       }
     }
   },
-  "defaultProject": "EDFrontend"
+  "defaultProject": "InstrumentWorld.Frontend"
 }
